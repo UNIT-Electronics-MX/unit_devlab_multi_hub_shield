@@ -1,5 +1,5 @@
 
-# DevLab: [Protocol/Interface] [Chip/Model] [Brief Description][Module/Sensor/Shield/Adapter]
+# DevLab: Muilti Hub Shield
 <!-- Exception:
 
 The PULSAR development board line does not use the DevLab: prefix.
