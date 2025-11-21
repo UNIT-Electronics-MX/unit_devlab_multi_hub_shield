@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- sidebar iframe generated using mdBook
+
+        This is a frame, and not included directly in the page, to control the total size of the
+        book. The TOC contains an entry for each page, so if each page includes a copy of the TOC,
+        the total size of the page becomes O(n**2).
+
+        The frame is only used as a fallback when JS is turned off. When it's on, the sidebar is
+        instead added to the main page by `toc.js` instead. The JavaScript mode is better
+        because, when running in a `file:///` URL, the iframed page would not be Same-Origin as
+        the rest of the page, so the sidebar and the main page theme would fall out of sync.
+        -->
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <!-- Custom HTML head -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body class="sidebar-iframe-inner">
+        <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html" target="_parent">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Hardware</li><li class="chapter-item expanded "><a href="hardware/overview.html" target="_parent"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="hardware/pinout.html" target="_parent"><strong aria-hidden="true">2.</strong> Pinout</a></li><li class="chapter-item expanded "><a href="hardware/dimensions.html" target="_parent"><strong aria-hidden="true">3.</strong> Dimensions</a></li><li class="chapter-item expanded "><a href="hardware/topology.html" target="_parent"><strong aria-hidden="true">4.</strong> Topology</a></li><li class="chapter-item expanded "><a href="hardware/pin-&-connector-layout.html" target="_parent"><strong aria-hidden="true">5.</strong> Pin &amp; Connector Layout</a></li><li class="chapter-item expanded "><a href="hardware/functional-description.html" target="_parent"><strong aria-hidden="true">6.</strong> Functional Description</a></li><li class="chapter-item expanded "><a href="hardware/applications.html" target="_parent"><strong aria-hidden="true">7.</strong> Applications</a></li><li class="chapter-item expanded affix "><li class="part-title">Software</li><li class="chapter-item expanded "><a href="software/getting-started.html" target="_parent"><strong aria-hidden="true">8.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="software/examples.html" target="_parent"><strong aria-hidden="true">9.</strong> Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">Resources</li><li class="chapter-item expanded "><a href="resources.html" target="_parent"><strong aria-hidden="true">10.</strong> Datasheet &amp; Documentation</a></li><li class="chapter-item expanded affix "><li class="part-title">Additional Information</li><li class="chapter-item expanded "><a href="license.html" target="_parent"><strong aria-hidden="true">11.</strong> License</a></li></ol>
+    </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        const menuBar = document.querySelector(".menu-bar .right-buttons");
+        if (menuBar) {
+            // Shop Link
+            const shopLink = document.createElement("a");
+            shopLink.href = "https://uelectronics.com/";
+            shopLink.target = "_blank";
+            shopLink.innerHTML = "🛒";
+            shopLink.title = "Shop";
+            shopLink.style.cssText = "color: #666; text-decoration: none; padding: 4px; font-size: 14px; margin-right: 4px; border: 1px solid #ddd; border-radius: 3px; transition: all 0.2s ease; display: inline-block; text-align: center; width: 24px; height: 24px; line-height: 16px;";
+            shopLink.onmouseover = function() { this.style.borderColor = "#999"; this.style.backgroundColor = "#f5f5f5"; };
+            shopLink.onmouseout = function() { this.style.borderColor = "#ddd"; this.style.backgroundColor = "transparent"; };
+            
+            // Repository Link
+            const repoLink = document.createElement("a");
+            repoLink.href = "https://github.com/UNIT-Electronics-MX/unit_template_modules";
+            repoLink.target = "_blank";
+            repoLink.innerHTML = "📋";
+            repoLink.title = "Repository";
+            repoLink.style.cssText = "color: #666; text-decoration: none; padding: 4px; font-size: 14px; margin-right: 4px; border: 1px solid #ddd; border-radius: 3px; transition: all 0.2s ease; display: inline-block; text-align: center; width: 24px; height: 24px; line-height: 16px;";
+            repoLink.onmouseover = function() { this.style.borderColor = "#999"; this.style.backgroundColor = "#f5f5f5"; };
+            repoLink.onmouseout = function() { this.style.borderColor = "#ddd"; this.style.backgroundColor = "transparent"; };
+            
+            // Insert links in correct order
+            menuBar.insertBefore(repoLink, menuBar.firstChild);
+            menuBar.insertBefore(shopLink, menuBar.firstChild);
+        }
+    }, 100);
+});
+</script>
+</html>
