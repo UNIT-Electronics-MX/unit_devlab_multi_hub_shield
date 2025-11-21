@@ -1,5 +1,5 @@
 
-# DevLab: Muilti Hub Shield
+# DevLab: Multi Hub Shield
 <!-- Exception:
 
 The PULSAR development board line does not use the DevLab: prefix.
