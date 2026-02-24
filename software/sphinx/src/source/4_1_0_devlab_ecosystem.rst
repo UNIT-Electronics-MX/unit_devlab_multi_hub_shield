@@ -1,82 +1,224 @@
-DevLab Ecosystem Integration
+devlab ecosystem integration
 =============================
 
-Overview
---------
+devlab concept
+--------------
 
-The DevLab Multi Hub Shield features 7 QWIIC-STEMMA compatible connectors (JST 1mm pitch) that enable seamless integration with the DevLab ecosystem and third-party I2C modules. This standardized connector system allows for tool-free, daisy-chainable connections to hundreds of sensors and modules.
+discover unit electronics' devlab ecosystem, its universal connector, and how it facilitates rapid and modular prototyping.
 
-QWIIC/STEMMA QT Standard
-------------------------
+introduction
+~~~~~~~~~~~~
 
-**What is QWIIC/STEMMA QT?**
+devlab is a modular ecosystem proposed by unit electronics, geared towards rapid prototyping, immediate assembly and flexibility in electronic design.
 
-QWIIC (developed by SparkFun) and STEMMA QT (developed by Adafruit) are compatible I2C connector standards that share:
+its purpose is to accelerate hardware development through integrated modules, sensors, and tools that share a common interconnection standard, without imposing restrictions on the physical form factor of the boards. the key element of the devlab ecosystem is the universal 1.0 mm, 4-pin jst sh connector, combined with a development part number nomenclature, which formally identifies products belonging to the ecosystem.
 
-- Same JST SH 4-pin connector (1mm pitch)
-- Identical pinout
-- Cross-compatible modules
-- Standardized I2C communication
+definition
+~~~~~~~~~~
 
-**Benefits**
+devlab is a development ecosystem composed of electronic modules, sensors, boards, and accessories that meet these essential principles:
 
-- No soldering required
-- Hot-pluggable connections
-- Daisy-chain multiple devices
-- Standardized voltage (3.3V)
-- Polarity protection
-- Wide ecosystem compatibility
+.. list-table:: devlab core principles
+   :widths: 30 70
+   :header-rows: 1
 
-Technical Specifications
-------------------------
+   * - feature
+     - definition
+   * - **rapid prototyping**
+     - immediate integration with minimal configuration
+   * - **simple assembly**
+     - direct connection between modules using a standard connector
+   * - **pcb free format**
+     - there is no mandatory size or shape
 
-.. list-table:: QWIIC/STEMMA Specifications
+devlab connector
+----------------
+
+the devlab universal connector is based on a 4-pin jst sh 1.0mm and is used as a common interface for communication, control, and power.
+
+.. note::
+   the devlab connector is multiprotocol, but not simultaneous; this means that only one protocol should be used per connector at a time.
+
+compatible protocols
+~~~~~~~~~~~~~~~~~~~~
+
+the connector allows operation with various protocols depending on the module:
+
+- **i2c** (sda/scl)
+- **uart** (rx/tx)
+- **pwm**
+- **analog inputs** (adc)
+- **multipurpose gpio**
+- **rgb led control**
+- **swd/io** for programming and debugging
+
+purpose
+~~~~~~~
+
+the devlab connector functions as a multiprotocol interface, allowing:
+
+- connect sensors
+- power modules
+- pwm outputs
+- converters
+- programmable devices
+- expanders or multiplexers
+- purification systems
+
+.. warning::
+   **technical note**: the devlab connector is multiprotocol, but not simultaneous. only one protocol should be used per connector at a time; many of the signals are not compatible with each other when mixed in the same module or cable. the function of the connector will depend on the design of each module and the pin assignment made on the main board.
+
+official recommendation
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+to avoid electrical or communication conflicts, it is recommended to use a single protocol for each devlab connector, especially when the connected modules come from different families (i2c, uart, pwm, swd, etc.).
+
+this rule ensures the integrity of the ecosystem, protects devices, and guarantees predictable and safe operation.
+
+design philosophy
+-----------------
+
+devlab does not define a single form factor like arduino r3, feather, or raspberry pi pico. devlab modules can have any mechanical design: round, rectangular, miniature, large-scale, and intended for assembly into end products.
+
+**the only mandatory standard is to include the devlab connector.**
+
+exceptions
+~~~~~~~~~~
+
+there are boards that use the devlab connector, but they do not officially belong to the ecosystem because their development part number does not include the devlab nomenclature.
+
+.. list-table:: compatible non-devlab boards
+   :widths: 30 70
+   :header-rows: 1
+
+   * - development part number
+     - product
+   * - ue0071
+     - pulsar h2 development board
+   * - ue0072
+     - touch dot s3
+   * - ue0081
+     - jun r3 development board
+
+first generation
+~~~~~~~~~~~~~~~~
+
+the first implementation of the devlab concept occurred with the dualmcu family, considered the first generation, where the following was introduced:
+
+- the use of the devlab universal connector
+- the integration of multiple microcontrollers
+- the multi-protocol philosophy
+- compatibility with existing formats (nano, r3, circular)
+- the concept of interconnectable independent modules
+
+official identification
+-----------------------
+
+for a product to be officially devlab-certified, it must:
+
+.. list-table:: certification requirements
+   :widths: 15 85
+   :header-rows: 1
+
+   * - number
+     - requirement
+   * - 1
+     - include the word "devlab" in your official name
+   * - 2
+     - be registered with a development part number within the ue00xx series
+   * - 3
+     - integrate the devlab connector
+   * - 4
+     - maintain the modular, multi-protocol and rapid prototyping philosophy
+
+qwiic/stemma qt compatibility
+------------------------------
+
+the devlab multi hub shield features 7 qwiic-stemma compatible connectors (jst 1mm pitch) that enable seamless integration with the devlab ecosystem and third-party i2c modules. this standardized connector system allows for tool-free, daisy-chainable connections to hundreds of sensors and modules.
+
+what is qwiic/stemma qt?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+qwiic (developed by sparkfun) and stemma qt (developed by adafruit) are compatible i2c connector standards that share:
+
+- same jst sh 4-pin connector (1mm pitch)
+- identical pinout
+- cross-compatible modules
+- standardized i2c communication
+
+benefits
+~~~~~~~~
+
+- no soldering required
+- hot-pluggable connections
+- daisy-chain multiple devices
+- standardized voltage (3.3v)
+- polarity protection
+- wide ecosystem compatibility
+
+technical specifications
+-------------------------
+
+.. list-table:: qwiic/stemma specifications
    :header-rows: 1
    :widths: 30 70
 
-   * - Parameter
-     - Value
-   * - **Connector Type**
-     - JST SH 1mm pitch
-   * - **Number of Connectors**
+   * - parameter
+     - value
+   * - **connector type**
+     - jst sh 1mm pitch
+   * - **number of connectors**
      - 7 ports
-   * - **Pins**
-     - 4 (VCC, GND, SDA, SCL)
-   * - **Voltage**
-     - 3.3V
-   * - **Current per Port**
-     - 500mA max (total current shared)
-   * - **I2C Speed**
-     - Up to 400 kHz (Fast Mode)
-   * - **Cable Length**
-     - Up to 1m recommended
-   * - **Daisy-Chain**
-     - Unlimited (limited by I2C address space)
+   * - **pins**
+     - 4 (vcc, gnd, sda, scl)
+   * - **voltage**
+     - 3.3v
+   * - **current per port**
+     - 500ma max (total current shared)
+   * - **i2c speed**
+     - up to 400 khz (fast mode)
+   * - **cable length**
+     - up to 1m recommended
+   * - **daisy-chain**
+     - unlimited (limited by i2c address space)
 
-Pinout
+pinout
 ------
 
-Standard 4-pin QWIIC/STEMMA QT pinout:
+standard 4-pin qwiic/stemma qt pinout:
 
-.. code-block:: text
+.. list-table:: connector pinout
+   :widths: 15 20 35 30
+   :header-rows: 1
 
-   ┌─────────────┐
-   │ ● ● ● ●     │
-   │ 1 2 3 4     │
-   └─────────────┘
-   
-   Pin 1: GND   (Black wire)
-   Pin 2: 3.3V  (Red wire)
-   Pin 3: SDA   (Blue wire)
-   Pin 4: SCL   (Yellow wire)
+   * - pin
+     - signal
+     - function
+     - wire color
+   * - 1
+     - gnd
+     - ground
+     - black
+   * - 2
+     - 3.3v
+     - power supply
+     - red
+   * - 3
+     - sda
+     - i2c data
+     - blue
+   * - 4
+     - scl
+     - i2c clock
+     - yellow
 
-**Color Coding**
+**color coding**
 
-Standard cable colors:
-- **Black**: Ground
-- **Red**: 3.3V Power
-- **Blue**: I2C Data (SDA)
-- **Yellow**: I2C Clock (SCL)
+standard cable colors:
+- **black**: ground
+- **red**: 3.3v power
+- **blue**: i2c data (sda)
+- **yellow**: i2c clock (scl)
 
 Compatible Modules
 ------------------

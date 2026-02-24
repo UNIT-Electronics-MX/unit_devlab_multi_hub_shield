@@ -48,26 +48,26 @@ Each relay has three terminals:
 .. code-block:: text
 
    Relay OFF (Deenergized):
-   COM ──┬── NC (connected)
-         └── NO (disconnected)
+   COM --+-- NC (connected)
+         +-- NO (disconnected)
    
    Relay ON (Energized):
-   COM ──┬── NC (disconnected)
-         └── NO (connected)
+   COM --+-- NC (disconnected)
+         +-- NO (connected)
 
 **Terminal Layout**
 
 .. code-block:: text
 
-   ┌─────────────────┐
-   │  COM  NC   NO   │  Relay 1
-   │   ●    ●    ●   │
-   └─────────────────┘
+   +-----------------+
+   |  COM  NC   NO   |  Relay 1
+   |   o    o    o   |
+   +-----------------+
    
-   ┌─────────────────┐
-   │  COM  NC   NO   │  Relay 2
-   │   ●    ●    ●   │
-   └─────────────────┘
+   +-----------------+
+   |  COM  NC   NO   |  Relay 2
+   |   o    o    o   |
+   +-----------------+
 
 Control Interface
 -----------------
@@ -304,10 +304,11 @@ For inductive loads (motors, solenoids, relays):
 .. code-block:: text
 
    DC Motor Protection:
-   Motor ──┬──→ Relay
-           │
+   Motor --+--> Relay
+           |
          Diode (1N4007 or similar)
-           ↓
+           |
+           v
           GND
 
 Practical Applications
@@ -467,10 +468,10 @@ Specifications Summary
      - 300 ops/min
      - Mechanical limitation
    * - Contact Resistance
-     - <100mΩ
+     - <100 milliohms
      - When closed
    * - Insulation Resistance
-     - >100MΩ
+     - >100 Megaohms
      - When open
    * - Operating Temperature
      - -10°C to +55°C

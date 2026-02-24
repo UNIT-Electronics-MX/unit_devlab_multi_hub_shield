@@ -18,8 +18,8 @@ import shutil
 def setup(app):
     def copy_schematics(app, exception):
         if app.builder.name == "latex":
-            src = os.path.join(app.srcdir, "_static", "hardware","Schematics_CH552_USB_Multi-Protocol_Programmer_V1.pdf")
-            dst = os.path.join(app.outdir, "Schematics_CH552_USB_Multi-Protocol_Programmer_V1.pdf")
+            src = os.path.join(app.srcdir, "_static", "hardware","Schematics_devlab_multi_hub_shield.pdf")
+            dst = os.path.join(app.outdir, "devlab_multi_hub_shield.pdf")
             if os.path.exists(src):
                 shutil.copyfile(src, dst)
                 print("[sphinx hook] Copied schematic PDF for LaTeX")
@@ -29,7 +29,7 @@ def setup(app):
             return
 
         latex_build_dir = app.outdir
-        tex_file = os.path.join(latex_build_dir, 'programmer.tex')
+        tex_file = os.path.join(latex_build_dir, 'devlab_multi_hub_shield.tex')
 
         if not os.path.isfile(tex_file):
             print("[sphinx hook] .tex file not found")
@@ -63,8 +63,8 @@ def setup(app):
     app.connect("build-finished", copy_schematics)
 
 
-project = 'CH552 USB Multi-Protocol Programmer  User Guide and Technical Reference'
-copyright = '2025, Unit Electronics'
+project = 'DevLab: Multi Hub Shield  User Guide and Technical Reference'
+copyright = '2026, Unit Electronics'
 author = 'R&D and Innovation Department'
 release = '0.0.1'
 extensions = [
@@ -91,7 +91,7 @@ copybutton_only_copy_prompt_lines = False  # Copies all lines, including those w
 
 templates_path = ['_templates']
 html_theme_options = {
-    "repository_url": "https://github.com/UNIT-Electronics-MX/unit_ch552_multiprotocol_programmer",  # URL of your project's repository
+    "repository_url": "https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield",  # URL of your project's repository
     "repository_branch": "main",  # Rama principal de tu repositorio
       "path_to_docs": "docs/",  # Ruta a la documentación dentro del repositorio
     "use_repository_button": True,  # Muestra un botón que enlaza al repositorio
@@ -99,7 +99,7 @@ html_theme_options = {
     "use_edit_page_button": True,  # Muestra un botón para editar la página actual
 }
 latex_documents = [
-    ('index', 'programmer.tex', 'CH552 USB Multi-Protocol Programmer  User Guide and Technical Reference',
+    ('index', 'devlab_multi_hub_shield.tex', 'DevLab: Multi Hub Shield  User Guide and Technical Reference',
      'Department of Research, Innovation, and Development', 'manual'),
 ]
 
@@ -122,7 +122,7 @@ latex_elements = {
 % Encabezado tipo datasheet
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{CH552 Multi-Protocol Programmer}
+\fancyhead[L]{DevLab: Multi Hub Shield}
 \fancyhead[R]{Unit Electronics}
 \fancyfoot[C]{\thepage}
 
@@ -159,7 +159,7 @@ master_doc = 'index'
 numfig = True
 
 html_theme = 'sphinx_book_theme'
-html_logo = "_static/programmer.png"
+html_logo = "_static/logo.png"
 
 html_static_path = ['_static']
 latex_logo = "_static/logo.png" 

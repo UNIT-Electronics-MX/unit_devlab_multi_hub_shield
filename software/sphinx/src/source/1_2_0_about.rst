@@ -19,6 +19,22 @@ The shield is compatible with the following development board formats:
 
 All platforms can be connected via dedicated pin headers that provide access to power, GPIO, I2C, SPI, UART, and ADC interfaces.
 
+.. only:: html
+
+    .. rubric:: Schematic Diagram
+
+    .. raw:: html
+
+      <div style="text-align: center;">
+      <button style="background-color: rgb(226, 142, 15); color: white; border: none; padding: 10px 20px;"
+      onclick="window.open('./_static/unit_pinout_v_1_0_0_ue0064_multishield_es.pdf', '_blank')">
+      Download Schematics (PDF)
+      </button>
+      </div>
+      <br>
+      <iframe src="./_static/unit_pinout_v_1_0_0_ue0064_multishield_es.pdf" style="width:100%; height:900px;" frameborder="0"></iframe>
+
+  
 
 Supported Interfaces and Features
 ----------------------------------

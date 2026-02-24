@@ -101,26 +101,32 @@ The DevLab Multi Hub Shield supports the following microcontroller platforms:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: General Information
 
    1_0_0_terms
-   1_1_0_sdk
-   1_1_2_docker
    1_2_0_about
    2_0_0_started
-   2_1_0_avr_firmware
-   2_2_0_started
-   2_3_0_ide
-   3_0_0_arm
-   3_1_0_openocd 
-   4_0_0_rp2040
-   4_1_0_rp_firmware
-   5_0_0_stm32
-   5_1_0_stm32_firmware
-   7_0_0_cpld
-   7_1_0_cpld_firmware
-   
-   report
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Platform & Connectivity
+
+   3_0_0_platform_compatibility
+   3_1_0_connectivity
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Display & Visual Feedback
+
+   4_0_0_led_matrix
+   5_1_0_display_hub
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Ecosystem & Expansion
+
+   4_1_0_devlab_ecosystem
+   5_0_0_relay_modules
    
    
 

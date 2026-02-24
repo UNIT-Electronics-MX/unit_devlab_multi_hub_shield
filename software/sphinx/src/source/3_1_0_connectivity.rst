@@ -33,7 +33,7 @@ Inter-Integrated Circuit (I2C) is a synchronous, multi-master, multi-slave seria
    * - **Voltage Level**
      - 3.3V (compatible with 5V via level shifting)
    * - **Pull-up Resistors**
-     - Integrated on-board (4.7kΩ typical)
+     - Integrated on-board (4.7k ohms typical)
    * - **Maximum Devices**
      - 127 addressable devices
    * - **Connectors**

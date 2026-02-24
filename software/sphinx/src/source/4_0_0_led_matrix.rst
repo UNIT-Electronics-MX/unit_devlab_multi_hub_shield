@@ -398,7 +398,7 @@ Troubleshooting
 
 - Add capacitor (100-1000µF) across power
 - Shorten data wire if possible
-- Add 330Ω resistor in data line
+- Add 330 ohm resistor in data line
 - Ensure stable power supply
 
 **First LED works, others don't**
