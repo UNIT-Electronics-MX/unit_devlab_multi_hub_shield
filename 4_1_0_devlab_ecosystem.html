@@ -1,0 +1,1317 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>devlab ecosystem integration &#8212; DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=00122899"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4_1_0_devlab_ecosystem';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Relay Modules" href="5_0_0_relay_modules.html" />
+    <link rel="prev" title="Display Hub - OLED Display" href="5_1_0_display_hub.html" />
+    <link rel="icon" href="_static/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_0_0_terms.html">Terms, Acknowledgments, and Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_2_0_about.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_0_0_started.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Platform &amp; Connectivity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_0_0_platform_compatibility.html">Platform Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_1_0_connectivity.html">Connectivity Interfaces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Display &amp; Visual Feedback</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_0_0_led_matrix.html">LED Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_1_0_display_hub.html">Display Hub - OLED Display</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ecosystem &amp; Expansion</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">devlab ecosystem integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_0_0_relay_modules.html">Relay Modules</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/edit/main/docs/4_1_0_devlab_ecosystem.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/issues/new?title=Issue%20on%20page%20%2F4_1_0_devlab_ecosystem.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4_1_0_devlab_ecosystem.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>devlab ecosystem integration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-concept">devlab concept</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">definition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-connector">devlab connector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compatible-protocols">compatible protocols</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#official-recommendation">official recommendation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-philosophy">design philosophy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions">exceptions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-generation">first generation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#official-identification">official identification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qwiic-stemma-qt-compatibility">qwiic/stemma qt compatibility</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qwiic-stemma-qt">what is qwiic/stemma qt?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">benefits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-specifications">technical specifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pinout">pinout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatible-modules">Compatible Modules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-sensors">Environmental Sensors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-and-orientation">Motion and Orientation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display-modules">Display Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output-expansion">Input/Output Expansion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-useful-modules">Other Useful Modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daisy-chaining">Daisy-Chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-examples">Programming Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-for-devices">Scanning for Devices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-sensor-example">Multi-Sensor Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#micropython-example">MicroPython Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues-and-solutions">Common Issues and Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-ideas">Project Ideas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-station">Weather Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-tracker">Motion Tracker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#air-quality-monitor">Air Quality Monitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robotic-sensor-array">Robotic Sensor Array</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecosystem-resources">Ecosystem Resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="devlab-ecosystem-integration">
+<h1>devlab ecosystem integration<a class="headerlink" href="#devlab-ecosystem-integration" title="Link to this heading">#</a></h1>
+<section id="devlab-concept">
+<h2>devlab concept<a class="headerlink" href="#devlab-concept" title="Link to this heading">#</a></h2>
+<p>discover unit electronics’ devlab ecosystem, its universal connector, and how it facilitates rapid and modular prototyping.</p>
+<section id="introduction">
+<h3>introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
+<p>devlab is a modular ecosystem proposed by unit electronics, geared towards rapid prototyping, immediate assembly and flexibility in electronic design.</p>
+<p>its purpose is to accelerate hardware development through integrated modules, sensors, and tools that share a common interconnection standard, without imposing restrictions on the physical form factor of the boards. the key element of the devlab ecosystem is the universal 1.0 mm, 4-pin jst sh connector, combined with a development part number nomenclature, which formally identifies products belonging to the ecosystem.</p>
+</section>
+<section id="definition">
+<h3>definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
+<p>devlab is a development ecosystem composed of electronic modules, sensors, boards, and accessories that meet these essential principles:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">devlab core principles</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>feature</p></th>
+<th class="head"><p>definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>rapid prototyping</strong></p></td>
+<td><p>immediate integration with minimal configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>simple assembly</strong></p></td>
+<td><p>direct connection between modules using a standard connector</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pcb free format</strong></p></td>
+<td><p>there is no mandatory size or shape</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="devlab-connector">
+<h2>devlab connector<a class="headerlink" href="#devlab-connector" title="Link to this heading">#</a></h2>
+<p>the devlab universal connector is based on a 4-pin jst sh 1.0mm and is used as a common interface for communication, control, and power.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the devlab connector is multiprotocol, but not simultaneous; this means that only one protocol should be used per connector at a time.</p>
+</div>
+<section id="compatible-protocols">
+<h3>compatible protocols<a class="headerlink" href="#compatible-protocols" title="Link to this heading">#</a></h3>
+<p>the connector allows operation with various protocols depending on the module:</p>
+<ul class="simple">
+<li><p><strong>i2c</strong> (sda/scl)</p></li>
+<li><p><strong>uart</strong> (rx/tx)</p></li>
+<li><p><strong>pwm</strong></p></li>
+<li><p><strong>analog inputs</strong> (adc)</p></li>
+<li><p><strong>multipurpose gpio</strong></p></li>
+<li><p><strong>rgb led control</strong></p></li>
+<li><p><strong>swd/io</strong> for programming and debugging</p></li>
+</ul>
+</section>
+<section id="purpose">
+<h3>purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h3>
+<p>the devlab connector functions as a multiprotocol interface, allowing:</p>
+<ul class="simple">
+<li><p>connect sensors</p></li>
+<li><p>power modules</p></li>
+<li><p>pwm outputs</p></li>
+<li><p>converters</p></li>
+<li><p>programmable devices</p></li>
+<li><p>expanders or multiplexers</p></li>
+<li><p>purification systems</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>technical note</strong>: the devlab connector is multiprotocol, but not simultaneous. only one protocol should be used per connector at a time; many of the signals are not compatible with each other when mixed in the same module or cable. the function of the connector will depend on the design of each module and the pin assignment made on the main board.</p>
+</div>
+</section>
+<section id="official-recommendation">
+<h3>official recommendation<a class="headerlink" href="#official-recommendation" title="Link to this heading">#</a></h3>
+<p>to avoid electrical or communication conflicts, it is recommended to use a single protocol for each devlab connector, especially when the connected modules come from different families (i2c, uart, pwm, swd, etc.).</p>
+<p>this rule ensures the integrity of the ecosystem, protects devices, and guarantees predictable and safe operation.</p>
+</section>
+</section>
+<section id="design-philosophy">
+<h2>design philosophy<a class="headerlink" href="#design-philosophy" title="Link to this heading">#</a></h2>
+<p>devlab does not define a single form factor like arduino r3, feather, or raspberry pi pico. devlab modules can have any mechanical design: round, rectangular, miniature, large-scale, and intended for assembly into end products.</p>
+<p><strong>the only mandatory standard is to include the devlab connector.</strong></p>
+<section id="exceptions">
+<h3>exceptions<a class="headerlink" href="#exceptions" title="Link to this heading">#</a></h3>
+<p>there are boards that use the devlab connector, but they do not officially belong to the ecosystem because their development part number does not include the devlab nomenclature.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">compatible non-devlab boards</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>development part number</p></th>
+<th class="head"><p>product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ue0071</p></td>
+<td><p>pulsar h2 development board</p></td>
+</tr>
+<tr class="row-odd"><td><p>ue0072</p></td>
+<td><p>touch dot s3</p></td>
+</tr>
+<tr class="row-even"><td><p>ue0081</p></td>
+<td><p>jun r3 development board</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="first-generation">
+<h3>first generation<a class="headerlink" href="#first-generation" title="Link to this heading">#</a></h3>
+<p>the first implementation of the devlab concept occurred with the dualmcu family, considered the first generation, where the following was introduced:</p>
+<ul class="simple">
+<li><p>the use of the devlab universal connector</p></li>
+<li><p>the integration of multiple microcontrollers</p></li>
+<li><p>the multi-protocol philosophy</p></li>
+<li><p>compatibility with existing formats (nano, r3, circular)</p></li>
+<li><p>the concept of interconnectable independent modules</p></li>
+</ul>
+</section>
+</section>
+<section id="official-identification">
+<h2>official identification<a class="headerlink" href="#official-identification" title="Link to this heading">#</a></h2>
+<p>for a product to be officially devlab-certified, it must:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">certification requirements</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>number</p></th>
+<th class="head"><p>requirement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>include the word “devlab” in your official name</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>be registered with a development part number within the ue00xx series</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>integrate the devlab connector</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>maintain the modular, multi-protocol and rapid prototyping philosophy</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="qwiic-stemma-qt-compatibility">
+<h2>qwiic/stemma qt compatibility<a class="headerlink" href="#qwiic-stemma-qt-compatibility" title="Link to this heading">#</a></h2>
+<p>the devlab multi hub shield features 7 qwiic-stemma compatible connectors (jst 1mm pitch) that enable seamless integration with the devlab ecosystem and third-party i2c modules. this standardized connector system allows for tool-free, daisy-chainable connections to hundreds of sensors and modules.</p>
+<section id="what-is-qwiic-stemma-qt">
+<h3>what is qwiic/stemma qt?<a class="headerlink" href="#what-is-qwiic-stemma-qt" title="Link to this heading">#</a></h3>
+<p>qwiic (developed by sparkfun) and stemma qt (developed by adafruit) are compatible i2c connector standards that share:</p>
+<ul class="simple">
+<li><p>same jst sh 4-pin connector (1mm pitch)</p></li>
+<li><p>identical pinout</p></li>
+<li><p>cross-compatible modules</p></li>
+<li><p>standardized i2c communication</p></li>
+</ul>
+</section>
+<section id="benefits">
+<h3>benefits<a class="headerlink" href="#benefits" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>no soldering required</p></li>
+<li><p>hot-pluggable connections</p></li>
+<li><p>daisy-chain multiple devices</p></li>
+<li><p>standardized voltage (3.3v)</p></li>
+<li><p>polarity protection</p></li>
+<li><p>wide ecosystem compatibility</p></li>
+</ul>
+</section>
+</section>
+<section id="technical-specifications">
+<h2>technical specifications<a class="headerlink" href="#technical-specifications" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">qwiic/stemma specifications</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>parameter</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>connector type</strong></p></td>
+<td><p>jst sh 1mm pitch</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>number of connectors</strong></p></td>
+<td><p>7 ports</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pins</strong></p></td>
+<td><p>4 (vcc, gnd, sda, scl)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>voltage</strong></p></td>
+<td><p>3.3v</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>current per port</strong></p></td>
+<td><p>500ma max (total current shared)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>i2c speed</strong></p></td>
+<td><p>up to 400 khz (fast mode)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cable length</strong></p></td>
+<td><p>up to 1m recommended</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>daisy-chain</strong></p></td>
+<td><p>unlimited (limited by i2c address space)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="pinout">
+<h2>pinout<a class="headerlink" href="#pinout" title="Link to this heading">#</a></h2>
+<p>standard 4-pin qwiic/stemma qt pinout:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 22 </span><span class="caption-text">connector pinout</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>pin</p></th>
+<th class="head"><p>signal</p></th>
+<th class="head"><p>function</p></th>
+<th class="head"><p>wire color</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>gnd</p></td>
+<td><p>ground</p></td>
+<td><p>black</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>3.3v</p></td>
+<td><p>power supply</p></td>
+<td><p>red</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>sda</p></td>
+<td><p>i2c data</p></td>
+<td><p>blue</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>scl</p></td>
+<td><p>i2c clock</p></td>
+<td><p>yellow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>color coding</strong></p>
+<p>standard cable colors:
+- <strong>black</strong>: ground
+- <strong>red</strong>: 3.3v power
+- <strong>blue</strong>: i2c data (sda)
+- <strong>yellow</strong>: i2c clock (scl)</p>
+</section>
+<section id="compatible-modules">
+<h2>Compatible Modules<a class="headerlink" href="#compatible-modules" title="Link to this heading">#</a></h2>
+<p>The shield is compatible with hundreds of QWIIC and STEMMA QT modules:</p>
+<section id="environmental-sensors">
+<h3>Environmental Sensors<a class="headerlink" href="#environmental-sensors" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table" id="id6">
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Popular Environmental Sensors</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Measurements</p></th>
+<th class="head"><p>I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BME280</p></td>
+<td><p>Temperature, Humidity, Pressure</p></td>
+<td><p>0x76/0x77</p></td>
+</tr>
+<tr class="row-odd"><td><p>BMP388</p></td>
+<td><p>Pressure, Temperature</p></td>
+<td><p>0x76/0x77</p></td>
+</tr>
+<tr class="row-even"><td><p>SHT31</p></td>
+<td><p>Temperature, Humidity</p></td>
+<td><p>0x44/0x45</p></td>
+</tr>
+<tr class="row-odd"><td><p>ENS160</p></td>
+<td><p>Air Quality (eCO2, TVOC)</p></td>
+<td><p>0x52/0x53</p></td>
+</tr>
+<tr class="row-even"><td><p>VEML7700</p></td>
+<td><p>Ambient Light</p></td>
+<td><p>0x10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="motion-and-orientation">
+<h3>Motion and Orientation<a class="headerlink" href="#motion-and-orientation" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table" id="id7">
+<caption><span class="caption-number">Table 24 </span><span class="caption-text">Motion Sensors</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Features</p></th>
+<th class="head"><p>I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MPU6050</p></td>
+<td><p>6-axis IMU (Accel + Gyro)</p></td>
+<td><p>0x68/0x69</p></td>
+</tr>
+<tr class="row-odd"><td><p>BNO085</p></td>
+<td><p>9-axis IMU with fusion</p></td>
+<td><p>0x4A/0x4B</p></td>
+</tr>
+<tr class="row-even"><td><p>LIS3DH</p></td>
+<td><p>3-axis Accelerometer</p></td>
+<td><p>0x18/0x19</p></td>
+</tr>
+<tr class="row-odd"><td><p>VL53L1X</p></td>
+<td><p>Time-of-Flight Distance</p></td>
+<td><p>0x29</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="display-modules">
+<h3>Display Modules<a class="headerlink" href="#display-modules" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table" id="id8">
+<caption><span class="caption-number">Table 25 </span><span class="caption-text">Display Options</span><a class="headerlink" href="#id8" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SSD1306</p></td>
+<td><p>128x64 OLED</p></td>
+<td><p>0x3C/0x3D</p></td>
+</tr>
+<tr class="row-odd"><td><p>SH1107</p></td>
+<td><p>128x128 OLED</p></td>
+<td><p>0x3C/0x3D</p></td>
+</tr>
+<tr class="row-even"><td><p>HT16K33</p></td>
+<td><p>LED Matrix Driver</p></td>
+<td><p>0x70-0x77</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="input-output-expansion">
+<h3>Input/Output Expansion<a class="headerlink" href="#input-output-expansion" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table" id="id9">
+<caption><span class="caption-number">Table 26 </span><span class="caption-text">I/O Modules</span><a class="headerlink" href="#id9" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Features</p></th>
+<th class="head"><p>I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PCA9685</p></td>
+<td><p>16-channel PWM</p></td>
+<td><p>0x40-0x7F</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCP23017</p></td>
+<td><p>16-bit GPIO Expander</p></td>
+<td><p>0x20-0x27</p></td>
+</tr>
+<tr class="row-even"><td><p>ADS1115</p></td>
+<td><p>16-bit ADC (4-channel)</p></td>
+<td><p>0x48-0x4B</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="other-useful-modules">
+<h3>Other Useful Modules<a class="headerlink" href="#other-useful-modules" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>GPS modules (PA1010D)</p></li>
+<li><p>RTC (Real-Time Clock) modules</p></li>
+<li><p>EEPROM storage modules</p></li>
+<li><p>DAC (Digital-to-Analog) modules</p></li>
+<li><p>Color sensors (TCS34725)</p></li>
+<li><p>Gesture sensors (APDS9960)</p></li>
+</ul>
+</section>
+</section>
+<section id="daisy-chaining">
+<h2>Daisy-Chaining<a class="headerlink" href="#daisy-chaining" title="Link to this heading">#</a></h2>
+<p><strong>Concept</strong></p>
+<p>Multiple QWIIC modules can be connected in series using the dual connectors on each module:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Shield → Module 1 → Module 2 → Module 3 → ...
+
+Each module has 2 QWIIC ports for daisy-chaining
+</pre></div>
+</div>
+<p><strong>Configuration Example</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>DevLab Shield
+     │
+     ├── BME280 (Temp/Humidity/Pressure)
+     │     └── SSD1306 (OLED Display)
+     │           └── MPU6050 (IMU)
+     │
+     ├── VL53L1X (Distance Sensor)
+     │
+     └── ADS1115 (ADC Module)
+</pre></div>
+</div>
+<p><strong>Advantages</strong></p>
+<ul class="simple">
+<li><p>Single I2C bus for all devices</p></li>
+<li><p>Minimal wiring</p></li>
+<li><p>Easy to add/remove modules</p></li>
+<li><p>No breadboard needed</p></li>
+<li><p>Clean installations</p></li>
+</ul>
+</section>
+<section id="programming-examples">
+<h2>Programming Examples<a class="headerlink" href="#programming-examples" title="Link to this heading">#</a></h2>
+<section id="scanning-for-devices">
+<h3>Scanning for Devices<a class="headerlink" href="#scanning-for-devices" title="Link to this heading">#</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;I2C Scanner&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">nDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Scanning...&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">127</span><span class="p">;</span><span class="w"> </span><span class="n">address</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Wire</span><span class="p">.</span><span class="n">beginTransmission</span><span class="p">(</span><span class="n">address</span><span class="p">);</span>
+<span class="w">    </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Wire</span><span class="p">.</span><span class="n">endTransmission</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Device found at 0x&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span>
+<span class="w">      </span><span class="n">nDevices</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nDevices</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No devices found&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Scan complete&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="multi-sensor-example">
+<h3>Multi-Sensor Example<a class="headerlink" href="#multi-sensor-example" title="Link to this heading">#</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_BME280.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_MPU6050.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_SSD1306.h&gt;</span>
+
+<span class="n">Adafruit_BME280</span><span class="w"> </span><span class="n">bme</span><span class="p">;</span>
+<span class="n">Adafruit_MPU6050</span><span class="w"> </span><span class="n">mpu</span><span class="p">;</span>
+<span class="n">Adafruit_SSD1306</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Wire</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Initialize sensors</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">bme</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mh">0x76</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;BME280 not found!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mpu</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;MPU6050 not found!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">display</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">SSD1306_SWITCHCAPVCC</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Display not found!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">setTextSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">SSD1306_WHITE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Read BME280</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bme</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">humidity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bme</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">pressure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bme</span><span class="p">.</span><span class="n">readPressure</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100.0F</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Read MPU6050</span>
+<span class="w">  </span><span class="n">sensors_event_t</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">temp_event</span><span class="p">;</span>
+<span class="w">  </span><span class="n">mpu</span><span class="p">.</span><span class="n">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">temp_event</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Display on OLED</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Temp: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; C&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Hum: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">humidity</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; %&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;AccX: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">display</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="micropython-example">
+<h3>MicroPython Example<a class="headerlink" href="#micropython-example" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">I2C</span>
+<span class="kn">import</span> <span class="nn">bme280</span>
+<span class="kn">import</span> <span class="nn">ssd1306</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Initialize I2C</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scl</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">22</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
+
+<span class="c1"># Scan for devices</span>
+<span class="n">devices</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I2C devices found:&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nb">hex</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">])</span>
+
+<span class="c1"># Initialize sensors</span>
+<span class="n">bme</span> <span class="o">=</span> <span class="n">bme280</span><span class="o">.</span><span class="n">BME280</span><span class="p">(</span><span class="n">i2c</span><span class="o">=</span><span class="n">i2c</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mh">0x76</span><span class="p">)</span>
+<span class="n">oled</span> <span class="o">=</span> <span class="n">ssd1306</span><span class="o">.</span><span class="n">SSD1306_I2C</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">i2c</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="mh">0x3C</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Read sensor</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">pressure</span><span class="p">,</span> <span class="n">humidity</span> <span class="o">=</span> <span class="n">bme</span><span class="o">.</span><span class="n">read_compensated_data</span><span class="p">()</span>
+
+    <span class="c1"># Display</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temp: </span><span class="si">{</span><span class="n">temp</span><span class="o">/</span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">C&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hum: </span><span class="si">{</span><span class="n">humidity</span><span class="o">/</span><span class="mi">1024</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<p><strong>Addressing Conflicts</strong></p>
+<ul class="simple">
+<li><p>Check I2C addresses before connecting multiple modules</p></li>
+<li><p>Some modules allow address configuration via jumpers</p></li>
+<li><p>Use I2C scanner to verify all devices</p></li>
+<li><p>Document your module addresses</p></li>
+</ul>
+<p><strong>Cable Management</strong></p>
+<ul class="simple">
+<li><p>Keep cables as short as practical</p></li>
+<li><p>Avoid running I2C cables near power lines</p></li>
+<li><p>Use cable clips for organization</p></li>
+<li><p>Label cables for easier troubleshooting</p></li>
+</ul>
+<p><strong>Power Considerations</strong></p>
+<ul class="simple">
+<li><p>Calculate total current draw of all modules</p></li>
+<li><p>Don’t exceed 500mA total on QWIIC bus</p></li>
+<li><p>Use external power for high-current modules</p></li>
+<li><p>Consider voltage drops on long cables</p></li>
+</ul>
+<p><strong>Reliability</strong></p>
+<ul class="simple">
+<li><p>Secure connectors to prevent disconnection</p></li>
+<li><p>Test each module individually first</p></li>
+<li><p>Update firmware/libraries regularly</p></li>
+<li><p>Use quality QWIIC cables</p></li>
+</ul>
+</section>
+<section id="common-issues-and-solutions">
+<h2>Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Link to this heading">#</a></h2>
+<p><strong>Device Not Detected</strong></p>
+<ul class="simple">
+<li><p>Verify cable connections</p></li>
+<li><p>Check module power LED</p></li>
+<li><p>Run I2C scanner</p></li>
+<li><p>Try different QWIIC port</p></li>
+<li><p>Check I2C pull-up resistors</p></li>
+</ul>
+<p><strong>Communication Errors</strong></p>
+<ul class="simple">
+<li><p>Reduce cable length</p></li>
+<li><p>Lower I2C clock speed</p></li>
+<li><p>Check for address conflicts</p></li>
+<li><p>Verify power supply stability</p></li>
+<li><p>Add decoupling capacitors</p></li>
+</ul>
+<p><strong>Intermittent Operation</strong></p>
+<ul class="simple">
+<li><p>Secure loose connections</p></li>
+<li><p>Check cable quality</p></li>
+<li><p>Verify power supply capacity</p></li>
+<li><p>Reduce electromagnetic interference</p></li>
+<li><p>Test individual modules</p></li>
+</ul>
+</section>
+<section id="project-ideas">
+<h2>Project Ideas<a class="headerlink" href="#project-ideas" title="Link to this heading">#</a></h2>
+<section id="weather-station">
+<h3>Weather Station<a class="headerlink" href="#weather-station" title="Link to this heading">#</a></h3>
+<p>Modules needed:
+- BME280 (Temperature, Humidity, Pressure)
+- VEML7700 (Light sensor)
+- SSD1306 (Display)
+- RTC module (Time stamping)</p>
+</section>
+<section id="motion-tracker">
+<h3>Motion Tracker<a class="headerlink" href="#motion-tracker" title="Link to this heading">#</a></h3>
+<p>Modules needed:
+- MPU6050 or BNO085 (IMU)
+- GPS module
+- MicroSD module (Data logging)
+- Display module</p>
+</section>
+<section id="air-quality-monitor">
+<h3>Air Quality Monitor<a class="headerlink" href="#air-quality-monitor" title="Link to this heading">#</a></h3>
+<p>Modules needed:
+- ENS160 (Air quality sensor)
+- BME280 (Environmental data)
+- SSD1306 (Display)
+- RGB LED module (Visual alerts)</p>
+</section>
+<section id="robotic-sensor-array">
+<h3>Robotic Sensor Array<a class="headerlink" href="#robotic-sensor-array" title="Link to this heading">#</a></h3>
+<p>Modules needed:
+- Multiple VL53L1X (Distance sensors)
+- IMU module (Orientation)
+- GPIO expander (Control outputs)
+- PWM driver (Motor control)</p>
+</section>
+</section>
+<section id="ecosystem-resources">
+<h2>Ecosystem Resources<a class="headerlink" href="#ecosystem-resources" title="Link to this heading">#</a></h2>
+<p><strong>SparkFun QWIIC</strong>
+- Product catalog: <a class="reference external" href="https://www.sparkfun.com/qwiic">https://www.sparkfun.com/qwiic</a>
+- Tutorials and guides
+- Open-source designs</p>
+<p><strong>Adafruit STEMMA QT</strong>
+- Product catalog: <a class="reference external" href="https://www.adafruit.com/category/620">https://www.adafruit.com/category/620</a>
+- Learn guides
+- CircuitPython libraries</p>
+<p><strong>Third-Party Modules</strong>
+- DFRobot Gravity sensors
+- Seeed Grove I2C modules
+- Many compatible designs</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_1_0_display_hub.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Display Hub - OLED Display</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_0_0_relay_modules.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Relay Modules</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-concept">devlab concept</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">definition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-connector">devlab connector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compatible-protocols">compatible protocols</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#official-recommendation">official recommendation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-philosophy">design philosophy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions">exceptions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-generation">first generation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#official-identification">official identification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qwiic-stemma-qt-compatibility">qwiic/stemma qt compatibility</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qwiic-stemma-qt">what is qwiic/stemma qt?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">benefits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-specifications">technical specifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pinout">pinout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatible-modules">Compatible Modules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-sensors">Environmental Sensors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-and-orientation">Motion and Orientation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display-modules">Display Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output-expansion">Input/Output Expansion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-useful-modules">Other Useful Modules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daisy-chaining">Daisy-Chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-examples">Programming Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-for-devices">Scanning for Devices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-sensor-example">Multi-Sensor Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#micropython-example">MicroPython Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues-and-solutions">Common Issues and Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-ideas">Project Ideas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-station">Weather Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-tracker">Motion Tracker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#air-quality-monitor">Air Quality Monitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robotic-sensor-array">Robotic Sensor Array</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecosystem-resources">Ecosystem Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By R&D and Innovation Department
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Unit Electronics.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

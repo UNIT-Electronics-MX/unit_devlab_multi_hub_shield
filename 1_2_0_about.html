@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>General Information &#8212; DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=00122899"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_2_0_about';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="2_0_0_started.html" />
+    <link rel="prev" title="Terms, Acknowledgments, and Licenses" href="1_0_0_terms.html" />
+    <link rel="icon" href="_static/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Information</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_0_0_terms.html">Terms, Acknowledgments, and Licenses</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_0_0_started.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Platform &amp; Connectivity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_0_0_platform_compatibility.html">Platform Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_1_0_connectivity.html">Connectivity Interfaces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Display &amp; Visual Feedback</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_0_0_led_matrix.html">LED Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_1_0_display_hub.html">Display Hub - OLED Display</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ecosystem &amp; Expansion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_1_0_devlab_ecosystem.html">devlab ecosystem integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_0_0_relay_modules.html">Relay Modules</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/edit/main/docs/1_2_0_about.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/issues/new?title=Issue%20on%20page%20%2F1_2_0_about.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_2_0_about.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>General Information</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-microcontroller-platforms">Supported Microcontroller Platforms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-interfaces-and-features">Supported Interfaces and Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-options">Power Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-ecosystem-integration">DevLab Ecosystem Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-modules">Relay Modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwm-interfaces">PWM Interfaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-options">Display Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gravity-connectors">Gravity Connectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-options">Expansion Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#board-specifications">Board Specifications</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="general-information">
+<h1>General Information<a class="headerlink" href="#general-information" title="Link to this heading">#</a></h1>
+<p>The <strong>DevLab Multi Hub Shield</strong> is a modular shield expansion board designed to be compatible with various microcontroller platforms. It provides a comprehensive set of interfaces and features that make it ideal for prototyping, education, IoT projects, and automation applications.</p>
+<section id="supported-microcontroller-platforms">
+<h2>Supported Microcontroller Platforms<a class="headerlink" href="#supported-microcontroller-platforms" title="Link to this heading">#</a></h2>
+<p>The shield is compatible with the following development board formats:</p>
+<ul class="simple">
+<li><p><strong>Pulsar</strong> — UNIT Electronics flagship development board</p></li>
+<li><p><strong>Seeed Xiao</strong> — Compact form factor (ESP32, RP2040, SAMD21, etc.)</p></li>
+<li><p><strong>Raspberry Pi Pico</strong> — RP2040-based boards</p></li>
+<li><p><strong>Adafruit Feather</strong> — Feather-compatible boards</p></li>
+<li><p><strong>ESP32 Devkit V4</strong> — Standard ESP32 development boards</p></li>
+<li><p><strong>Mikro Bus</strong> — MikroElektronika Click boards ecosystem</p></li>
+</ul>
+<p>All platforms can be connected via dedicated pin headers that provide access to power, GPIO, I2C, SPI, UART, and ADC interfaces.</p>
+<p class="rubric">Schematic Diagram</p>
+<div style="text-align: center;">
+<button style="background-color: rgb(226, 142, 15); color: white; border: none; padding: 10px 20px;"
+onclick="window.open('./_static/unit_pinout_v_1_0_0_ue0064_multishield_es.pdf', '_blank')">
+Download Schematics (PDF)
+</button>
+</div>
+<br>
+<iframe src="./_static/unit_pinout_v_1_0_0_ue0064_multishield_es.pdf" style="width:100%; height:900px;" frameborder="0"></iframe></section>
+<section id="supported-interfaces-and-features">
+<h2>Supported Interfaces and Features<a class="headerlink" href="#supported-interfaces-and-features" title="Link to this heading">#</a></h2>
+<p>The DevLab Multi Hub Shield integrates multiple interfaces and peripherals for versatile application development:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Interface and Feature Overview</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Interface/Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>I2C</strong></p></td>
+<td><p>Standard I2C bus for sensor and module communication</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SPI</strong></p></td>
+<td><p>High-speed serial peripheral interface</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>UART</strong></p></td>
+<td><p>Serial communication interface</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>GPIO</strong></p></td>
+<td><p>General purpose input/output pins</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ADC</strong></p></td>
+<td><p>Analog-to-digital converter inputs via potentiometer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>LED Matrix</strong></p></td>
+<td><p>5x5 RGB LED matrix for visual feedback and displays</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>OLED Display</strong></p></td>
+<td><p>I2C 128x64 OLED display with TFT configuration options</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Relay Modules</strong></p></td>
+<td><p>2 relay modules for switching applications</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PWM Outputs</strong></p></td>
+<td><p>2 PWM modules for motor control and LED dimming</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Buzzer</strong></p></td>
+<td><p>PWM-driven buzzer for audio feedback</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Buttons</strong></p></td>
+<td><p>4 tactile buttons for user input</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Status LEDs</strong></p></td>
+<td><p>4 indicator LEDs for feedback</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>DevLab Connectors</strong></p></td>
+<td><p>7 QWIIC-STEMMA compatible connectors (JST 1mm pitch)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gravity Interface</strong></p></td>
+<td><p>4 Gravity connectors (2x4 and 2x3 pin configurations)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Breadboard Lines</strong></p></td>
+<td><p>4 breadboard-compatible expansion lines</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Expansion Connector</strong></p></td>
+<td><p>20-pin header for additional modules and custom shields</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="power-options">
+<h2>Power Options<a class="headerlink" href="#power-options" title="Link to this heading">#</a></h2>
+<p>The DevLab Multi Hub Shield supports multiple power input methods:</p>
+<ul class="simple">
+<li><p><strong>USB-C</strong>: Direct power via USB-C connector (5V)</p></li>
+<li><p><strong>3.3V Rail</strong>: Low-voltage power supply for compatible modules</p></li>
+<li><p><strong>5V Rail</strong>: Standard voltage for most peripherals</p></li>
+<li><p><strong>External Supply</strong>: Dedicated input for external power sources</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Power distribution is managed through on-board voltage regulators. Ensure proper voltage selection when connecting external modules.</p>
+</div>
+</section>
+<section id="devlab-ecosystem-integration">
+<h2>DevLab Ecosystem Integration<a class="headerlink" href="#devlab-ecosystem-integration" title="Link to this heading">#</a></h2>
+<p>The shield features <strong>7 QWIIC-STEMMA compatible connectors</strong> (JST 1mm pitch) that enable seamless integration with the DevLab ecosystem and third-party I2C modules. These connectors support:</p>
+<ul class="simple">
+<li><p>Daisy-chaining multiple sensors and modules</p></li>
+<li><p>Hot-plugging capability</p></li>
+<li><p>Standardized pinout (VCC, GND, SDA, SCL)</p></li>
+<li><p>Compatibility with SparkFun QWIIC and Adafruit STEMMA QT systems</p></li>
+</ul>
+</section>
+<section id="relay-modules">
+<h2>Relay Modules<a class="headerlink" href="#relay-modules" title="Link to this heading">#</a></h2>
+<p>Two integrated relay modules provide:</p>
+<ul class="simple">
+<li><p>Switching capability for AC/DC loads</p></li>
+<li><p>Isolated control signals</p></li>
+<li><p>LED indicators for relay status</p></li>
+<li><p>Screw terminal connections</p></li>
+</ul>
+</section>
+<section id="pwm-interfaces">
+<h2>PWM Interfaces<a class="headerlink" href="#pwm-interfaces" title="Link to this heading">#</a></h2>
+<p>Two dedicated PWM outputs allow:</p>
+<ul class="simple">
+<li><p>Motor speed control</p></li>
+<li><p>Servo positioning</p></li>
+<li><p>LED brightness control</p></li>
+<li><p>Variable frequency signal generation</p></li>
+</ul>
+</section>
+<section id="display-options">
+<h2>Display Options<a class="headerlink" href="#display-options" title="Link to this heading">#</a></h2>
+<p><strong>LED Matrix (5x5 RGB)</strong></p>
+<ul class="simple">
+<li><p>Individual addressable RGB LEDs</p></li>
+<li><p>Visual feedback and simple graphics</p></li>
+<li><p>Animation capabilities</p></li>
+<li><p>Programmable via GPIO</p></li>
+</ul>
+<p><strong>OLED Display (128x64)</strong></p>
+<ul class="simple">
+<li><p>I2C interface</p></li>
+<li><p>High contrast ratio</p></li>
+<li><p>Text and graphics support</p></li>
+<li><p>TFT configuration options for expanded functionality</p></li>
+</ul>
+</section>
+<section id="gravity-connectors">
+<h2>Gravity Connectors<a class="headerlink" href="#gravity-connectors" title="Link to this heading">#</a></h2>
+<p>Four Gravity-compatible connectors (DFRobot standard) provide:</p>
+<ul class="simple">
+<li><p><strong>2x4 pin connectors</strong> (2 units): For digital/analog sensors</p></li>
+<li><p><strong>2x3 pin connectors</strong> (2 units): For compact sensor modules</p></li>
+<li><p>Color-coded for easy identification</p></li>
+<li><p>Wide sensor compatibility</p></li>
+</ul>
+</section>
+<section id="expansion-options">
+<h2>Expansion Options<a class="headerlink" href="#expansion-options" title="Link to this heading">#</a></h2>
+<p><strong>Breadboard Lines</strong></p>
+<p>4 breadboard-compatible lines with standard 2.54mm pitch for:</p>
+<ul class="simple">
+<li><p>Custom circuit prototyping</p></li>
+<li><p>Temporary connections</p></li>
+<li><p>Wire jumper access to signals</p></li>
+</ul>
+<p><strong>20-Pin Expansion Connector</strong></p>
+<p>High-density connector providing:</p>
+<ul class="simple">
+<li><p>Access to all major bus signals</p></li>
+<li><p>Power distribution</p></li>
+<li><p>GPIO expansion</p></li>
+<li><p>Stacking capability for additional shields</p></li>
+</ul>
+</section>
+<section id="board-specifications">
+<h2>Board Specifications<a class="headerlink" href="#board-specifications" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Technical Specifications</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Compatible Formats</strong></p></td>
+<td><p>Pulsar, Xiao, Pi Pico, Feather, Devkit V4, Mikro Bus</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Operating Voltage</strong></p></td>
+<td><p>3.3V / 5V (selectable)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Input Power</strong></p></td>
+<td><p>USB-C 5V, External 3.3V-5V</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>I2C Connectors</strong></p></td>
+<td><p>7x QWIIC-STEMMA (JST 1mm)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Gravity Connectors</strong></p></td>
+<td><p>4x (2x4 pins + 2x3 pins)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Relays</strong></p></td>
+<td><p>2x electromechanical relays</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PWM Outputs</strong></p></td>
+<td><p>2 channels</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>LEDs</strong></p></td>
+<td><p>4 status LEDs + 5x5 RGB matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Buttons</strong></p></td>
+<td><p>4 tactile push buttons</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Display</strong></p></td>
+<td><p>128x64 I2C OLED</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Expansion</strong></p></td>
+<td><p>20-pin header + 4 breadboard lines</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_0_0_terms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Terms, Acknowledgments, and Licenses</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_0_0_started.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting Started</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-microcontroller-platforms">Supported Microcontroller Platforms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-interfaces-and-features">Supported Interfaces and Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-options">Power Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devlab-ecosystem-integration">DevLab Ecosystem Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-modules">Relay Modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwm-interfaces">PWM Interfaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-options">Display Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gravity-connectors">Gravity Connectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-options">Expansion Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#board-specifications">Board Specifications</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By R&D and Innovation Department
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Unit Electronics.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

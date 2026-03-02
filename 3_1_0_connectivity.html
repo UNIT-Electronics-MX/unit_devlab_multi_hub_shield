@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Connectivity Interfaces &#8212; DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=00122899"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_1_0_connectivity';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LED Matrix" href="4_0_0_led_matrix.html" />
+    <link rel="prev" title="Platform Compatibility" href="3_0_0_platform_compatibility.html" />
+    <link rel="icon" href="_static/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="DevLab: Multi Hub Shield  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_0_0_terms.html">Terms, Acknowledgments, and Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_2_0_about.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_0_0_started.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Platform &amp; Connectivity</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_0_0_platform_compatibility.html">Platform Compatibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Connectivity Interfaces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Display &amp; Visual Feedback</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_0_0_led_matrix.html">LED Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_1_0_display_hub.html">Display Hub - OLED Display</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ecosystem &amp; Expansion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4_1_0_devlab_ecosystem.html">devlab ecosystem integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_0_0_relay_modules.html">Relay Modules</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/edit/main/docs/3_1_0_connectivity.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/issues/new?title=Issue%20on%20page%20%2F3_1_0_connectivity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/3_1_0_connectivity.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Connectivity Interfaces</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i2c-interface">I2C Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-interface">SPI Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uart-interface">UART Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-general-purpose-input-output">GPIO (General Purpose Input/Output)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adc-analog-to-digital-converter">ADC (Analog to Digital Converter)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-selection-guide">Interface Selection Guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="connectivity-interfaces">
+<h1>Connectivity Interfaces<a class="headerlink" href="#connectivity-interfaces" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The DevLab Multi Hub Shield integrates multiple industry-standard communication protocols, providing comprehensive connectivity options for sensors, displays, and peripheral modules. This section details each interface and provides practical guidance for implementation.</p>
+</section>
+<section id="i2c-interface">
+<h2>I2C Interface<a class="headerlink" href="#i2c-interface" title="Link to this heading">#</a></h2>
+<p><strong>Description</strong></p>
+<p>Inter-Integrated Circuit (I2C) is a synchronous, multi-master, multi-slave serial communication protocol. The shield implements I2C as the primary interface for:</p>
+<ul class="simple">
+<li><p>OLED display communication</p></li>
+<li><p>QWIIC/STEMMA QT connectors</p></li>
+<li><p>Sensor modules</p></li>
+<li><p>Expansion devices</p></li>
+</ul>
+<p><strong>Technical Specifications</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">I2C Specifications</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Protocol</strong></p></td>
+<td><p>I2C (Two-Wire Interface)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Speed</strong></p></td>
+<td><p>Standard (100 kHz), Fast (400 kHz)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Voltage Level</strong></p></td>
+<td><p>3.3V (compatible with 5V via level shifting)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Pull-up Resistors</strong></p></td>
+<td><p>Integrated on-board (4.7k ohms typical)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Maximum Devices</strong></p></td>
+<td><p>127 addressable devices</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Connectors</strong></p></td>
+<td><p>7x QWIIC/STEMMA QT (JST 1mm)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Pin Assignment</strong></p>
+<ul class="simple">
+<li><p><strong>SDA</strong> (Serial Data): Bidirectional data line</p></li>
+<li><p><strong>SCL</strong> (Serial Clock): Clock signal generated by master</p></li>
+<li><p><strong>VCC</strong>: Power supply (3.3V or 5V)</p></li>
+<li><p><strong>GND</strong>: Common ground</p></li>
+</ul>
+<p><strong>Common I2C Addresses</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Typical I2C Device Addresses</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Device</p></th>
+<th class="head"><p>Default Address</p></th>
+<th class="head"><p>Alternative</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SSD1306 OLED</p></td>
+<td><p>0x3C</p></td>
+<td><p>0x3D</p></td>
+</tr>
+<tr class="row-odd"><td><p>BME280 Sensor</p></td>
+<td><p>0x76</p></td>
+<td><p>0x77</p></td>
+</tr>
+<tr class="row-even"><td><p>MPU6050 IMU</p></td>
+<td><p>0x68</p></td>
+<td><p>0x69</p></td>
+</tr>
+<tr class="row-odd"><td><p>ADS1115 ADC</p></td>
+<td><p>0x48</p></td>
+<td><p>0x49-0x4B</p></td>
+</tr>
+<tr class="row-even"><td><p>PCA9685 PWM</p></td>
+<td><p>0x40</p></td>
+<td><p>0x41-0x7F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Programming Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w">        </span><span class="c1">// Initialize I2C as master</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Read from I2C device at address 0x3C</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">beginTransmission</span><span class="p">(</span><span class="mh">0x3C</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">    </span><span class="c1">// Register address</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">endTransmission</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">requestFrom</span><span class="p">(</span><span class="mh">0x3C</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Request 1 byte</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Wire</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">byte</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Wire</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="spi-interface">
+<h2>SPI Interface<a class="headerlink" href="#spi-interface" title="Link to this heading">#</a></h2>
+<p><strong>Description</strong></p>
+<p>Serial Peripheral Interface (SPI) is a high-speed, full-duplex synchronous serial communication protocol. The shield provides SPI connectivity for:</p>
+<ul class="simple">
+<li><p>High-speed sensors</p></li>
+<li><p>SD card modules</p></li>
+<li><p>External memory</p></li>
+<li><p>Display modules</p></li>
+</ul>
+<p><strong>Technical Specifications</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">SPI Specifications</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Protocol</strong></p></td>
+<td><p>SPI (4-wire)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Speed</strong></p></td>
+<td><p>Up to 20 MHz (platform dependent)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mode</strong></p></td>
+<td><p>Master only</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Voltage Level</strong></p></td>
+<td><p>3.3V logic</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chip Selects</strong></p></td>
+<td><p>Multiple CS pins available</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Pin Assignment</strong></p>
+<ul class="simple">
+<li><p><strong>MOSI</strong> (Master Out Slave In): Data from master to slave</p></li>
+<li><p><strong>MISO</strong> (Master In Slave Out): Data from slave to master</p></li>
+<li><p><strong>SCK</strong> (Serial Clock): Clock signal from master</p></li>
+<li><p><strong>CS/SS</strong> (Chip Select): Device selection (active low)</p></li>
+</ul>
+<p><strong>SPI Modes</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">SPI Clock Modes</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>CPOL/CPHA</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>0/0</p></td>
+<td><p>Clock idle low, sample on rising edge</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>0/1</p></td>
+<td><p>Clock idle low, sample on falling edge</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>1/0</p></td>
+<td><p>Clock idle high, sample on falling edge</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>1/1</p></td>
+<td><p>Clock idle high, sample on rising edge</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Programming Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
+
+<span class="cp">#define CS_PIN 10</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Deselect</span>
+
+<span class="w">  </span><span class="n">SPI</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">SPI</span><span class="p">.</span><span class="n">setClockDivider</span><span class="p">(</span><span class="n">SPI_CLOCK_DIV4</span><span class="p">);</span><span class="w">  </span><span class="c1">// 4 MHz</span>
+<span class="w">  </span><span class="n">SPI</span><span class="p">.</span><span class="n">setDataMode</span><span class="p">(</span><span class="n">SPI_MODE0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Select device</span>
+
+<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SPI</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="mh">0xAA</span><span class="p">);</span><span class="w">  </span><span class="c1">// Send and receive</span>
+
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Deselect</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="uart-interface">
+<h2>UART Interface<a class="headerlink" href="#uart-interface" title="Link to this heading">#</a></h2>
+<p><strong>Description</strong></p>
+<p>Universal Asynchronous Receiver-Transmitter (UART) provides serial communication for:</p>
+<ul class="simple">
+<li><p>GPS modules</p></li>
+<li><p>Bluetooth modules</p></li>
+<li><p>Debug console</p></li>
+<li><p>Serial sensors</p></li>
+</ul>
+<p><strong>Technical Specifications</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">UART Specifications</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Protocol</strong></p></td>
+<td><p>Asynchronous serial</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Baud Rates</strong></p></td>
+<td><p>9600, 19200, 38400, 57600, 115200 bps</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Data Bits</strong></p></td>
+<td><p>8 bits (standard)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Parity</strong></p></td>
+<td><p>None, Even, Odd</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Stop Bits</strong></p></td>
+<td><p>1 or 2</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Voltage Level</strong></p></td>
+<td><p>3.3V TTL</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Pin Assignment</strong></p>
+<ul class="simple">
+<li><p><strong>TX</strong> (Transmit): Data output from shield</p></li>
+<li><p><strong>RX</strong> (Receive): Data input to shield</p></li>
+<li><p><strong>GND</strong>: Common ground reference</p></li>
+</ul>
+<p><strong>Programming Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w">      </span><span class="c1">// USB serial</span>
+<span class="w">  </span><span class="n">Serial1</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w">       </span><span class="c1">// Hardware UART</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Forward data between Serial and Serial1</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial1</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">read</span><span class="p">());</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="n">read</span><span class="p">());</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="gpio-general-purpose-input-output">
+<h2>GPIO (General Purpose Input/Output)<a class="headerlink" href="#gpio-general-purpose-input-output" title="Link to this heading">#</a></h2>
+<p><strong>Description</strong></p>
+<p>GPIO pins provide flexible digital input/output functionality for:</p>
+<ul class="simple">
+<li><p>Button reading</p></li>
+<li><p>LED control</p></li>
+<li><p>Relay activation</p></li>
+<li><p>Digital sensors</p></li>
+<li><p>Interrupt handling</p></li>
+</ul>
+<p><strong>Technical Specifications</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id6">
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">GPIO Specifications</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Voltage Level</strong></p></td>
+<td><p>3.3V logic (5V tolerant on some platforms)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Current per Pin</strong></p></td>
+<td><p>12-20 mA (platform dependent)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Input Modes</strong></p></td>
+<td><p>Pull-up, Pull-down, High-impedance</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Output Modes</strong></p></td>
+<td><p>Push-pull, Open-drain</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Interrupt Support</strong></p></td>
+<td><p>Rising edge, Falling edge, Change, Low level</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Programming Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define LED_PIN 13</span>
+<span class="cp">#define BUTTON_PIN 5</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Attach interrupt</span>
+<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">),</span>
+<span class="w">                  </span><span class="n">buttonPressed</span><span class="p">,</span><span class="w"> </span><span class="n">FALLING</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Main code here</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">buttonPressed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="adc-analog-to-digital-converter">
+<h2>ADC (Analog to Digital Converter)<a class="headerlink" href="#adc-analog-to-digital-converter" title="Link to this heading">#</a></h2>
+<p><strong>Description</strong></p>
+<p>The ADC interface allows reading analog voltages from:</p>
+<ul class="simple">
+<li><p>Potentiometer</p></li>
+<li><p>Analog sensors</p></li>
+<li><p>Voltage dividers</p></li>
+<li><p>Variable resistors</p></li>
+</ul>
+<p><strong>Technical Specifications</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="id7">
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">ADC Specifications</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Resolution</strong></p></td>
+<td><p>10-12 bits (platform dependent)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Voltage Range</strong></p></td>
+<td><p>0 - 3.3V (typical)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Channels</strong></p></td>
+<td><p>Multiple ADC inputs available</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sampling Rate</strong></p></td>
+<td><p>Up to 200 ksps (platform dependent)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Reference Voltage</strong></p></td>
+<td><p>Internal or external</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Programming Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define POT_PIN A0</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">analogReadResolution</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="w">  </span><span class="c1">// 12-bit resolution (if supported)</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">rawValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">POT_PIN</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rawValue</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">3.3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4095.0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Raw: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">rawValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Voltage: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">voltage</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="interface-selection-guide">
+<h2>Interface Selection Guide<a class="headerlink" href="#interface-selection-guide" title="Link to this heading">#</a></h2>
+<p><strong>When to Use I2C</strong></p>
+<ul class="simple">
+<li><p>Multiple devices on same bus</p></li>
+<li><p>Low to moderate data rates</p></li>
+<li><p>Sensor modules</p></li>
+<li><p>Display communication</p></li>
+<li><p>QWIIC/STEMMA QT ecosystem</p></li>
+</ul>
+<p><strong>When to Use SPI</strong></p>
+<ul class="simple">
+<li><p>High-speed data transfer</p></li>
+<li><p>SD cards, memory chips</p></li>
+<li><p>Fast displays</p></li>
+<li><p>Real-time applications</p></li>
+<li><p>Point-to-point communication</p></li>
+</ul>
+<p><strong>When to Use UART</strong></p>
+<ul class="simple">
+<li><p>GPS modules</p></li>
+<li><p>Wireless modules (Bluetooth, Wi-Fi)</p></li>
+<li><p>Debug output</p></li>
+<li><p>Simple two-wire communication</p></li>
+<li><p>Legacy serial devices</p></li>
+</ul>
+<p><strong>When to Use GPIO</strong></p>
+<ul class="simple">
+<li><p>Simple on/off control</p></li>
+<li><p>Button inputs</p></li>
+<li><p>LED outputs</p></li>
+<li><p>Interrupt-based events</p></li>
+<li><p>Bit-banging custom protocols</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<p><strong>I2C</strong></p>
+<ul class="simple">
+<li><p>Always check for address conflicts</p></li>
+<li><p>Use I2C scanner to detect devices</p></li>
+<li><p>Keep cable lengths short (&lt;30cm for reliable operation)</p></li>
+<li><p>Verify pull-up resistors are present</p></li>
+</ul>
+<p><strong>SPI</strong></p>
+<ul class="simple">
+<li><p>Use shortest possible wires for high-speed operation</p></li>
+<li><p>Properly manage chip select signals</p></li>
+<li><p>Check SPI mode compatibility</p></li>
+<li><p>Consider signal integrity at high speeds</p></li>
+</ul>
+<p><strong>UART</strong></p>
+<ul class="simple">
+<li><p>Match baud rates exactly between devices</p></li>
+<li><p>Use common ground reference</p></li>
+<li><p>Consider flow control for reliable communication</p></li>
+<li><p>Avoid ground loops in long cable runs</p></li>
+</ul>
+<p><strong>GPIO</strong></p>
+<ul class="simple">
+<li><p>Never exceed maximum current ratings</p></li>
+<li><p>Use current-limiting resistors for LEDs</p></li>
+<li><p>Implement proper debouncing for buttons</p></li>
+<li><p>Be cautious with voltage levels (3.3V vs 5V)</p></li>
+</ul>
+<p><strong>ADC</strong></p>
+<ul class="simple">
+<li><p>Filter noisy signals in hardware</p></li>
+<li><p>Average multiple readings for stability</p></li>
+<li><p>Consider reference voltage accuracy</p></li>
+<li><p>Account for input impedance</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_0_0_platform_compatibility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Platform Compatibility</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_0_0_led_matrix.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">LED Matrix</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i2c-interface">I2C Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-interface">SPI Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uart-interface">UART Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-general-purpose-input-output">GPIO (General Purpose Input/Output)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adc-analog-to-digital-converter">ADC (Analog to Digital Converter)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-selection-guide">Interface Selection Guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By R&D and Innovation Department
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Unit Electronics.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
