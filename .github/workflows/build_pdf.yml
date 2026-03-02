@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - 'software/documentation/**'
       - 'software/sphinx/**'
       - 'README.md'
       - 'hardware/**'
@@ -12,7 +11,6 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'software/documentation/**'
       - 'software/sphinx/**'
       - 'README.md'
       - 'hardware/**'
@@ -38,7 +36,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-lang-english ghostscript latexmk
-        pip install -r software/documentation/requirements.txt
         pip install -r software/sphinx/requirements.txt
         pip install Jinja2
 
@@ -47,16 +44,16 @@ jobs:
     #################################################
     - name: Build LaTeX PDF from README
       working-directory: software/documentation
-      env:
-        REPO_NAME: ${{ github.event.repository.name }}
-      run: |
-        python test_readme.py
-        python generate_pdf.py
-        gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer \
-           -dNOPAUSE -dQUIET -dBATCH \
-           -sOutputFile=build/${REPO_NAME}_product_brief.pdf build/*.pdf
-
-    #################################################
+    # - name: Build LaTeX PDF from README
+    #   working-directory: software/documentation
+    #   env:
+    #     REPO_NAME: ${{ github.event.repository.name }}
+    #   run: |
+    #     python test_readme.py
+    #     python generate_pdf.py
+    #     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer \
+    #        -dNOPAUSE -dQUIET -dBATCH \
+    # #################################################
     # Procesar Documentación de Hardware
     #################################################
     - name: Clean previous hardware documentation
@@ -93,8 +90,8 @@ jobs:
         # Crear directorio docs si no existe (pero no eliminar hardware/)
         mkdir -p docs
 
-        # PDF generado desde LaTeX
-        cp software/documentation/build/${REPO_NAME}_product_brief.pdf docs/
+        # PDF generado desde LaTeX (comentado - directorio no existe)
+        # cp software/documentation/build/${REPO_NAME}_product_brief.pdf docs/
 
         # PDF generado por Sphinx
         cp software/sphinx/pdf/programmer.pdf docs/${REPO_NAME}_sphinx.pdf
