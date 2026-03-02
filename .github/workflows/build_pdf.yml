@@ -41,9 +41,8 @@ jobs:
 
     #################################################
     # Generar PDF del Product Brief con nombre del repo
+    # (Comentado - directorio software/documentation no existe)
     #################################################
-    - name: Build LaTeX PDF from README
-      working-directory: software/documentation
     # - name: Build LaTeX PDF from README
     #   working-directory: software/documentation
     #   env:
@@ -53,7 +52,9 @@ jobs:
     #     python generate_pdf.py
     #     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer \
     #        -dNOPAUSE -dQUIET -dBATCH \
-    # #################################################
+    #        -sOutputFile=build/${REPO_NAME}_product_brief.pdf build/*.pdf
+
+    #################################################
     # Procesar Documentación de Hardware
     #################################################
     - name: Clean previous hardware documentation
