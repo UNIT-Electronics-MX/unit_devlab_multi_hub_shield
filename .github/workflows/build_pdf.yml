@@ -95,7 +95,7 @@ jobs:
         # cp software/documentation/build/${REPO_NAME}_product_brief.pdf docs/
 
         # PDF generado por Sphinx
-        cp software/sphinx/pdf/programmer.pdf docs/${REPO_NAME}_sphinx.pdf
+        cp software/sphinx/pdf/devlab_multi_hub_shield.pdf docs/${REPO_NAME}_sphinx.pdf
 
         # HTML generado por Sphinx (copiar archivos, no sobrescribir hardware/)
         rsync -av --exclude='hardware' --exclude='hardware.html' software/sphinx/docs/ docs/
