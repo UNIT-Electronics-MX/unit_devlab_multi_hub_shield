@@ -122,7 +122,7 @@ Ecosystem Standards and References
      - `https://github.com/espressif/esp-idf <https://github.com/espressif/esp-idf>`_
 
 Library References
------------------
+------------------
 
 Common libraries used with the DevLab Multi Hub Shield:
 
@@ -176,7 +176,7 @@ Disclaimer
 THIS PRODUCT AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS PRODUCT.
 
 Support and Community
---------------------
+---------------------
 
 For support, questions, and discussions:
 
@@ -185,13 +185,13 @@ For support, questions, and discussions:
 - **Community Forums**: Join discussions with other users and developers
 
 Revision History
----------------
+----------------
 
 - **Version 1.0.0** - Initial release of DevLab Multi Hub Shield
 - **Documentation**: Updated February 2026
 
 Copyright Notice
----------------
+----------------
 
 Copyright © 2026 UNIT Electronics. All rights reserved.
 

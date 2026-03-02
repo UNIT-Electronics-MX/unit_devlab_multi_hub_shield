@@ -19,7 +19,7 @@ definition
 devlab is a development ecosystem composed of electronic modules, sensors, boards, and accessories that meet these essential principles:
 
 .. list-table:: devlab core principles
-   :widths: 30 70
+   :widths: 25 75
    :header-rows: 1
 
    * - feature
@@ -88,7 +88,7 @@ exceptions
 there are boards that use the devlab connector, but they do not officially belong to the ecosystem because their development part number does not include the devlab nomenclature.
 
 .. list-table:: compatible non-devlab boards
-   :widths: 30 70
+   :widths: 25 75
    :header-rows: 1
 
    * - development part number
@@ -117,7 +117,7 @@ official identification
 for a product to be officially devlab-certified, it must:
 
 .. list-table:: certification requirements
-   :widths: 15 85
+   :widths: 10 90
    :header-rows: 1
 
    * - number
@@ -161,7 +161,7 @@ technical specifications
 
 .. list-table:: qwiic/stemma specifications
    :header-rows: 1
-   :widths: 30 70
+   :widths: 40 60
 
    * - parameter
      - value
@@ -188,7 +188,7 @@ pinout
 standard 4-pin qwiic/stemma qt pinout:
 
 .. list-table:: connector pinout
-   :widths: 15 20 35 30
+   :widths: 10 20 40 30
    :header-rows: 1
 
    * - pin

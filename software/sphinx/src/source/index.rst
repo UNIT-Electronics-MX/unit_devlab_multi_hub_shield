@@ -127,7 +127,12 @@ The DevLab Multi Hub Shield supports the following microcontroller platforms:
 
    4_1_0_devlab_ecosystem
    5_0_0_relay_modules
-   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support
+
+   report
    
 
 
