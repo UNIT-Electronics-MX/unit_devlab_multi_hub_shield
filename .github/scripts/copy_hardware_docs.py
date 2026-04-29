@@ -12,8 +12,7 @@ from pathlib import Path
 from jinja2 import Template
 
 # Configuración de rutas
-# El script está en .github/workflows/scripts/, necesitamos ir 3 niveles arriba para llegar al root
-BASE_DIR = Path(__file__).parent.parent.parent.parent
+BASE_DIR = Path(__file__).parent.parent.parent
 HARDWARE_DIR = BASE_DIR / "hardware"
 DOCS_DIR = BASE_DIR / "docs"
 DOCS_HARDWARE_DIR = DOCS_DIR / "hardware"
@@ -156,16 +155,11 @@ def generate_html_page(file_structure):
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">
-                📟 Hardware Documentation
+                Hardware Documentation
             </span>
-            <div class="d-flex align-items-center">
-                <a href="index.html" class="btn btn-sm btn-outline-primary me-3">
-                    <i class="bi bi-book"></i> Documentación del Firmware
-                </a>
-                <span class="navbar-text">
-                    Generado: {{ generated_time }}
-                </span>
-            </div>
+            <span class="navbar-text">
+                Generado: {{ generated_time }}
+            </span>
         </div>
     </nav>
 
@@ -447,16 +441,16 @@ def generate_html_page(file_structure):
     template = Template(html_template)
     html_content = template.render(**template_data)
     
-    # Guardar archivo HTML como hardware.html para no conflictuar con la documentación de Sphinx
-    html_file = DOCS_DIR / "hardware.html"
+    # Guardar archivo HTML
+    html_file = DOCS_DIR / "index.html"
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(html_content)
     
-    print(f"📄 Página HTML generada: {html_file}")
+    print(f" Página HTML generada: {html_file}")
 
 def main():
     """Función principal"""
-    print("🚀 Iniciando proceso de copia y generación de documentación de hardware...")
+    print(" Iniciando proceso de copia y generación de documentación...")
     
     try:
         # Copiar archivos
@@ -468,10 +462,9 @@ def main():
         # Generar página HTML
         generate_html_page(file_structure)
         
-        print("\n✅ Proceso completado exitosamente!")
-        print(f"📁 Archivos copiados en: {DOCS_HARDWARE_DIR}")
-        print(f"📄 Página HTML disponible en: {DOCS_DIR}/hardware.html")
-        print(f"💡 La documentación de Sphinx permanece en: {DOCS_DIR}/index.html")
+        print("\n Proceso completado exitosamente!")
+        print(f" Archivos copiados en: {DOCS_HARDWARE_DIR}")
+        print(f"Página HTML disponible en: {DOCS_DIR}/index.html")
         
     except Exception as e:
         print(f" Error durante el proceso: {str(e)}")
