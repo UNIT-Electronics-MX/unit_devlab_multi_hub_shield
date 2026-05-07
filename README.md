@@ -12,10 +12,10 @@ This is a modular shield expansion board designed to be compatible with various 
 
 ### Quick Links
 
-[![Product Wiki](https://img.shields.io/badge/Product%20Wiki-blue?style=for-the-badge)](#)
+[![Product Wiki](https://img.shields.io/badge/Product%20Wiki-blue?style=for-the-badge)]([#](https://wiki.uelectronics.com/wiki/unit_devlab_multi_hub_shield))
 [![Datasheet](https://img.shields.io/badge/Datasheet-green?style=for-the-badge)](#)
-[![Buy Now](https://img.shields.io/badge/Buy%20Now-orange?style=for-the-badge)](#)
-[![Getting Started](https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge)](#)
+[![Buy Now](https://img.shields.io/badge/Buy%20Now-orange?style=for-the-badge)]([#](https://uelectronics.com/))
+[![Getting Started](https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge)]([#](https://github.com/UNIT-Electronics-MX/unit_devlab_multi_hub_shield/wiki))
 
 </div>
 
