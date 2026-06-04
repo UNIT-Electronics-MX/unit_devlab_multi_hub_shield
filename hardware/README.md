@@ -8,7 +8,7 @@
 ## Pinout
 
 <div align="center">
-    <a href="#"><img src="unit_pinout_v_1_0_0_ue0064__multishield_en.png/" width="500px"><br/>Pinout</a>
+    <a href="./unit_pinout_v_1_0_0_ue0064_devlab_multihub_shield_en.pdf"><img src="./resources/unit_pinout_v_1_0_0_ue0064_devlab_multihub_shield_en.png" width="500px"><br/>Pinout</a>
     <br/>
     <br/>
     <br/>
